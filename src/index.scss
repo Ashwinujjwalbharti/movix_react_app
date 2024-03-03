@@ -1,3 +1,6 @@
+ // here inserted basic css for using in others pages
+
+
 :root {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -9,7 +12,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-
+  // these are colors variables which we are going to use thorughout 
     --black: #04152d;
     --black2: #041226;
     --black3: #020c1b;
@@ -19,7 +22,8 @@
     --orange: #f89e00;
     --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
 }
-
+  
+// these margins and padding is applied to all pages
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +37,7 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
+// this is used when poster or date is loding loading type css is seen
 .skeleton {
     position: relative;
     overflow: hidden;

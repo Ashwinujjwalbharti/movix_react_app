@@ -1,3 +1,5 @@
+// these mixin css of media query css for desktop
+// mixin is used when many times a css is used
 @mixin sm {
     @media only screen and (min-width: 640px) {
         @content;

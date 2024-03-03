@@ -1,5 +1,7 @@
 @import "../../../mixins.scss";
+ // .heroBanner css is basically used for mobile fixing
 
+ // here we used nesting of css which is help of scc
 .heroBanner {
     width: 100%;
     height: 450px;
@@ -7,6 +9,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    // this is included from mixins
     @include md {
         height: 700px;
     }
@@ -29,6 +32,7 @@
             }
         }
     }
+    // merging layer css
     .opacity-layer {
         width: 100%;
         height: 250px;
@@ -41,6 +45,7 @@
         bottom: 0;
         left: 0;
     }
+    // this css for search and welcome and subtitle
     .heroBannerContent {
         display: flex;
         flex-direction: column;
@@ -54,6 +59,7 @@
             font-size: 50px;
             font-weight: 700;
             margin-bottom: 10px;
+        // this is from mixins for dextop css
             @include md {
                 margin-bottom: 0;
                 font-size: 90px;

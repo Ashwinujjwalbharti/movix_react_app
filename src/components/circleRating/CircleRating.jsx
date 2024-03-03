@@ -3,7 +3,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 import "./style.scss";
-
+ // rating is desructured  which is sended as props
 const CircleRating = ({ rating }) => {
     return (
         <div className="circleRating">

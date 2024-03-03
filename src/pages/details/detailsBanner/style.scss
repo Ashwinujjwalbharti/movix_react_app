@@ -3,11 +3,11 @@
     width: 100%;
     background-color: var(--black);
     padding-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     @include md {
         margin-bottom: 0;
         padding-top: 120px;
-        min-height: 700px;
+        min-height: 400px;
     }
     .backdrop-img {
         width: 100%;
@@ -82,10 +82,10 @@
                     line-height: 28px;
                 }
             }
-            .genres {
-                margin-bottom: 25px;
-                flex-flow: row wrap;
-            }
+            // .genres {
+            //     margin-bottom: 25px;
+            //     flex-flow: row wrap;
+            // }
             .overview {
                 margin-bottom: 25px;
                 .heading {
@@ -157,7 +157,8 @@
                 display: flex;
                 align-items: center;
                 gap: 25px;
-                margin-bottom: 25px;
+                 margin-top:50px;
+                margin-bottom: 50px;
             }
 
             .info {
@@ -182,19 +183,7 @@
         }
     }
 
-    .detailsBannerSkeleton {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        gap: 25px;
-        @include md {
-            gap: 50px;
-            flex-direction: row;
-        }
-        .contentWrapper {
-            display: flex;
-            gap: 50px;
-        }
+   
         .left {
             flex-shrink: 0;
             width: 100%;
@@ -222,5 +211,4 @@
                 }
             }
         }
-    }
-}
+     }

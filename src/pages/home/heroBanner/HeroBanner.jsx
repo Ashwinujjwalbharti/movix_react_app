@@ -11,22 +11,32 @@ import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 const HeroBanner = () => {
     const [background, setBackground] = useState("");
     const [query, setQuery] = useState("");
+     //navigate takes to that path which i have searched 
     const navigate = useNavigate();
     const { url } = useSelector((state) => state.home);
-    const { data, loading } = useFetch("/movie/upcoming");
+    // fech data of upcoming movie from tmdb api
+    const { data ,loading} = useFetch("/movie/upcoming");
+    
 
     useEffect(() => {
+    // path for background image which will change every render
         const bg =
             url.backdrop +
             data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
         setBackground(bg);
+        
     }, [data]);
-
+    // when we search on search box and event.key is when we press enter then it will search
     const searchQueryHandler = (event) => {
-        if (event.key === "Enter" && query.length > 0) {
+        if (event.key === "Enter"  && query.length > 0) {
             navigate(`/search/${query}`);
         }
     };
+    const clickHandler=()=>{
+        if(query.length>0){
+            navigate(`/search/${query}`);
+        }
+    }
 
     return (
         <div className="heroBanner">
@@ -35,7 +45,7 @@ const HeroBanner = () => {
                     <Img src={background} />
                 </div>
             )}
-
+    {/* this is for making two layers image opecity */}
             <div className="opacity-layer"></div>
             <ContentWrapper>
                 <div className="heroBannerContent">
@@ -51,7 +61,7 @@ const HeroBanner = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                        <button>Search</button>
+                        <button onClick={clickHandler} >Search</button>
                     </div>
                 </div>
             </ContentWrapper>
